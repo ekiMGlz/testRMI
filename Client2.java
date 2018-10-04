@@ -19,8 +19,11 @@ import java.util.Random;
             
 			try 
             {
-                Registry registry = LocateRegistry.getRegistry(host);
-                Hola stub = (Hola) registry.lookup("Hola");
+		//Encontrar el registro
+                Registry registry = LocateRegistry.getRegistry(host, 1099);
+                System.out.println("Se encontro rmiregistry en: "+ host);
+				
+				Hola stub = (Hola) registry.lookup("Hola");
 				
 				//Prueba suma
 				
