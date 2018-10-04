@@ -59,7 +59,7 @@ public class Server implements Hola {
         
         try {
             Server obj = new Server();
-            Hola stub = (Hola) UnicastRemoteObject.exportObject(obj, 0);
+            Hola stub = (Hola) UnicastRemoteObject.exportObject(obj, 2099);
 
             // Bind the remote object's stub in the registry
             Registry registry = LocateRegistry.getRegistry();
